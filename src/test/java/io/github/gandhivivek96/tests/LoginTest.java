@@ -1,6 +1,7 @@
 package io.github.gandhivivek96.tests;
 
 import io.github.gandhivivek96.pages.HomePage;
+import io.github.gandhivivek96.pojo.TestData;
 import io.github.gandhivivek96.pojo.User;
 
 import static org.testng.Assert.*;
@@ -9,21 +10,19 @@ import io.github.gandhivivek96.utils.LoggerUtility;
 import org.apache.logging.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static io.github.gandhivivek96.constants.Browser.*;
 
-public class LoginTest {
+@Listeners({ io.github.gandhivivek96.listeners.TestListener.class })
+public class LoginTest  extends TestBase {
 
 
-    HomePage homePage;
-    ;
 
-    @BeforeMethod(description = "Loading homepage")
-    public void setUp()
-    {
-        homePage = new HomePage(CHROME);
-    }
+
+
+
 
     @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
     dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
@@ -41,7 +40,8 @@ public class LoginTest {
 
     @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
             dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
-            dataProvider = "LoginTestCSVDataProvider")
+            dataProvider = "LoginTestCSVDataProvider",
+            retryAnalyzer = io.github.gandhivivek96.listeners.MyRetryAnalyzer.class)
     public void loginTestCSV(User user)
     {
         Logger logger = LoggerUtility.getLogger(this.getClass());
@@ -57,8 +57,7 @@ public class LoginTest {
 
     @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
             dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
-            dataProvider = "LoginTestExcelDataProvider",
-            retryAnalyzer = io.github.gandhivivek96.listeners.MyRetryAnalyzer.class)
+            dataProvider = "LoginTestExcelDataProvider")
     public void loginTestExcel(User user)
     {
 

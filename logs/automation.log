@@ -1,2 +1,86 @@
-2025-03-08 20:01:45 [main] INFO  io.github.gandhivivek96.tests.LoginTest - Test started
-2025-03-08 20:01:51 [main] INFO  io.github.gandhivivek96.tests.LoginTest - Test started
+2025-03-08 22:56:40 [main] INFO io.github.gandhivivek96.listeners.TestListener::onStart::64 Test Suite Started
+2025-03-08 22:56:40 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:40 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:40 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:42 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:56:42 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:56:43 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTestCSV
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.tests.LoginTest::loginTestCSV::48 Test started
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTestExcel
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTest
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:56:44 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:56:48 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestSuccess::37 loginTestCSV PASSED
+2025-03-08 22:56:48 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:48 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.listeners.TestListener::onTestSuccess::37 loginTestExcel PASSED
+2025-03-08 22:56:48 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:48 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.listeners.TestListener::onTestSuccess::37 loginTest PASSED
+2025-03-08 22:56:48 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:49 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:56:50 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:56:50 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTestCSV
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.tests.LoginTest::loginTestCSV::48 Test started
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTest
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:56:51 [TestNG-test-UI Automation Test-1] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:56:52 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTestExcel
+2025-03-08 22:56:52 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:56:52 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:56:52 [TestNG-test-UI Automation Test-3] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:56:52 [TestNG-test-UI Automation Test-2] WARN io.github.gandhivivek96.listeners.TestListener::onTestSkipped::57 loginTestCSV SKIPPED
+2025-03-08 22:56:52 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:53 [TestNG-test-UI Automation Test-1] ERROR io.github.gandhivivek96.listeners.TestListener::onTestFailure::43 loginTest FAILED
+2025-03-08 22:56:53 [TestNG-test-UI Automation Test-1] ERROR io.github.gandhivivek96.listeners.TestListener::onTestFailure::44 Unable to locate element: //a[@title='View my customer account']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.1', java.version: '22.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5252450a-6d20-4a81-8b3d-56dd3bce2e97, findElement {using=xpath, value=//a[@title='View my customer account']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 135.0, moz:accessibilityChecks: false, moz:buildID: 20250130195129, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 24.3.0, moz:processID: 77034, moz:profile: /var/folders/ns/hhssds4964j..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: 5252450a-6d20-4a81-8b3d-56dd3bce2e97
+2025-03-08 22:56:53 [TestNG-test-UI Automation Test-3] ERROR io.github.gandhivivek96.listeners.TestListener::onTestFailure::43 loginTestExcel FAILED
+2025-03-08 22:56:53 [TestNG-test-UI Automation Test-3] ERROR io.github.gandhivivek96.listeners.TestListener::onTestFailure::44 Unable to locate element: //a[@title='View my customer account']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.1', java.version: '22.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [23821d59-1413-4ccb-a134-cbf7983d04aa, findElement {using=xpath, value=//a[@title='View my customer account']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 135.0, moz:accessibilityChecks: false, moz:buildID: 20250130195129, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 24.3.0, moz:processID: 77002, moz:profile: /var/folders/ns/hhssds4964j..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: 23821d59-1413-4ccb-a134-cbf7983d04aa
+2025-03-08 22:56:54 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:56:55 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTestCSV
+2025-03-08 22:56:55 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:56:55 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:56:55 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.tests.LoginTest::loginTestCSV::48 Test started
+2025-03-08 22:56:55 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:56:57 [TestNG-test-UI Automation Test-2] WARN io.github.gandhivivek96.listeners.TestListener::onTestSkipped::57 loginTestCSV SKIPPED
+2025-03-08 22:56:57 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::<init>::37 Launching browser
+2025-03-08 22:56:59 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToWebsite::54 Visiting the website http://www.automationpractice.pl/index.php
+2025-03-08 22:57:00 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::28 loginTestCSV
+2025-03-08 22:57:00 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::29 verifies login test for valid user
+2025-03-08 22:57:00 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.listeners.TestListener::onTestStart::30 [e2e, sanity]
+2025-03-08 22:57:00 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.tests.LoginTest::loginTestCSV::48 Test started
+2025-03-08 22:57:00 [TestNG-test-UI Automation Test-2] INFO io.github.gandhivivek96.pages.HomePage::goToLoginPage::40 Login page
+2025-03-08 22:57:01 [TestNG-test-UI Automation Test-2] ERROR io.github.gandhivivek96.listeners.TestListener::onTestFailure::43 loginTestCSV FAILED
+2025-03-08 22:57:01 [TestNG-test-UI Automation Test-2] ERROR io.github.gandhivivek96.listeners.TestListener::onTestFailure::44 Unable to locate element: //a[@title='View my customer account']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.1', java.version: '22.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e157f215-89b0-4e09-b778-b2ff9d7f1d27, findElement {using=xpath, value=//a[@title='View my customer account']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 135.0, moz:accessibilityChecks: false, moz:buildID: 20250130195129, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 24.3.0, moz:processID: 77162, moz:profile: /var/folders/ns/hhssds4964j..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}
+Session ID: e157f215-89b0-4e09-b778-b2ff9d7f1d27
+2025-03-08 22:57:02 [main] INFO io.github.gandhivivek96.listeners.TestListener::onFinish::70 Test Suite Completed
