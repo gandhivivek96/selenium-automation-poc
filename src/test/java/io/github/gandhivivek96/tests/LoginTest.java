@@ -5,6 +5,8 @@ import io.github.gandhivivek96.pojo.User;
 
 import static org.testng.Assert.*;
 
+import io.github.gandhivivek96.utils.LoggerUtility;
+import org.apache.logging.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,6 +17,7 @@ public class LoginTest {
 
 
     HomePage homePage;
+    ;
 
     @BeforeMethod(description = "Loading homepage")
     public void setUp()
@@ -41,6 +44,8 @@ public class LoginTest {
             dataProvider = "LoginTestCSVDataProvider")
     public void loginTestCSV(User user)
     {
+        Logger logger = LoggerUtility.getLogger(this.getClass());
+        logger.info("Test started");
         assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
         try {
             Thread.sleep(2000);
@@ -56,6 +61,8 @@ public class LoginTest {
             retryAnalyzer = io.github.gandhivivek96.listeners.MyRetryAnalyzer.class)
     public void loginTestExcel(User user)
     {
+
+
         assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
         try {
             Thread.sleep(2000);

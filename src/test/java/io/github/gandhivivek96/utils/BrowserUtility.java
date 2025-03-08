@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -28,8 +29,10 @@ public abstract class BrowserUtility {
 
     public BrowserUtility(Browser browserName)
     {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
         if(browserName == Browser.CHROME)
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(chromeOptions);
         else if (browserName == Browser.EDGE)
             driver =  new EdgeDriver();
         else if (browserName == Browser.FIREFOX)
