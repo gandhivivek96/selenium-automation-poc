@@ -1,40 +1,67 @@
 package io.github.gandhivivek96.tests;
 
-import io.github.gandhivivek96.utils.BrowserUtility;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.gandhivivek96.pages.HomePage;
+import io.github.gandhivivek96.pojo.User;
+
+import static org.testng.Assert.*;
+
+import org.testng.IRetryAnalyzer;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import static io.github.gandhivivek96.constants.Browser.*;
 
 public class LoginTest {
 
-    public static void main(String[] args) {
 
-        WebDriver driver = new ChromeDriver(); // loose coupling
-//      BrowserUtility browserUtility = new BrowserUtility(driver);
-//
-//        String url = "http://www.automationpractice.pl/index.php";
-//
-//       browserUtility.maximizeWindow();
-//       browserUtility.goToWebsite(url);
-//
-//        By signInLocator = By.xpath("//a[contains(text(),'Sign in')]");
-//        browserUtility.clickOn(signInLocator);
-//
-//        By emailLocator = By.id("email");
-//        browserUtility.enterText(emailLocator,"koyene5739@oziere.com");
-//
-//        By pwdLocator = By.id("passwd");
-//        browserUtility.enterText(pwdLocator,"password");
-//
-//        By signInButtonLocator = By.id("SubmitLogin");
-//        browserUtility.clickOn(signInButtonLocator);
-//        try {
-//            Thread.sleep(2000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
-//        driver.quit();
+    HomePage homePage;
 
+    @BeforeMethod(description = "Loading homepage")
+    public void setUp()
+    {
+        homePage = new HomePage(CHROME);
+    }
+
+    @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
+    dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
+    dataProvider = "LoginTestDataProvider")
+    public void loginTest(User user)
+    {
+        assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        homePage.getDriver().quit();
+    }
+
+    @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
+            dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
+            dataProvider = "LoginTestCSVDataProvider")
+    public void loginTestCSV(User user)
+    {
+        assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        homePage.getDriver().quit();
+    }
+
+    @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
+            dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
+            dataProvider = "LoginTestExcelDataProvider",
+            retryAnalyzer = io.github.gandhivivek96.listeners.MyRetryAnalyzer.class)
+    public void loginTestExcel(User user)
+    {
+        assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        homePage.getDriver().quit();
     }
 }

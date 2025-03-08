@@ -29,7 +29,7 @@ public final class HomePage extends BrowserUtility {
 //        goToWebsite(readProperty(QA,"URL"));
 
 //        json util
-         goToWebsite(readJson(QA));
+         goToWebsite(readJson(QA).getUrl());
     }
 
     public LoginPage goToLoginPage()
