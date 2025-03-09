@@ -1,5 +1,14 @@
 target/
 
+ # Ignore screenshots directory
+ screenshots/
+
+ # Ignore logs directory
+ logs/
+
+ # Ignore specific HTML reports (if they are at the project root)
+ report.html
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws
