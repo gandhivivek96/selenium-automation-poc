@@ -21,15 +21,8 @@ public class LoginTest  extends TestBase {
     @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
     dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
     dataProvider = "LoginTestDataProvider")
-    public void loginTest(User user)
-    {
-        assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        homePage.getDriver().quit();
+    public void loginTest(User user) {
+        assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(), "Jon Snow");
     }
 
     @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
@@ -41,12 +34,7 @@ public class LoginTest  extends TestBase {
         Logger logger = LoggerUtility.getLogger(this.getClass());
         logger.info("Test started");
         assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        homePage.getDriver().quit();
+
     }
 
     @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
@@ -57,11 +45,5 @@ public class LoginTest  extends TestBase {
 
 
         assertEquals(homePage.goToLoginPage().doLoginwith(user.getEmailAddress(), user.getPassword()).getUsername(),"Jon Snow") ;
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        homePage.getDriver().quit();
     }
 }

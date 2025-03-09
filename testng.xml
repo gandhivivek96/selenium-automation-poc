@@ -7,6 +7,10 @@
         <parameter name="isHeadless" value="${isHeadless}" />man
         <classes>
             <class name="io.github.gandhivivek96.tests.LoginTest" />
+            <class name="io.github.gandhivivek96.tests.InvalidCredentialsLoginTest" />
+            <class name="io.github.gandhivivek96.tests.AddNewFirstAddressTest" />
+            <class name="io.github.gandhivivek96.tests.SearchProductTest" />
+            <class name="io.github.gandhivivek96.tests.ProductCheckoutTest" />
         </classes>
     </test>
 

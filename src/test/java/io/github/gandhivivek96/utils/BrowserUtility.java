@@ -10,18 +10,28 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public abstract class BrowserUtility {
 
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>() ;
     private Logger logger = LoggerUtility.getLogger(this.getClass());
+    private WebDriverWait wait;
+
+
     public BrowserUtility(WebDriver driver) {
         this.driver.set(driver);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30L));
     }
 
     public BrowserUtility(String browserName)
@@ -32,6 +42,7 @@ public abstract class BrowserUtility {
             driver.set( new EdgeDriver());
         else
             System.err.println("Invalid browser");
+        wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
     }
 
     public BrowserUtility(Browser browserName)
@@ -43,6 +54,7 @@ public abstract class BrowserUtility {
             driver.set(new EdgeDriver());
         else if (browserName == Browser.FIREFOX)
             driver.set(new FirefoxDriver());
+        wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
     }
 
     public BrowserUtility(Browser browserName, boolean isHeadless)
@@ -61,6 +73,7 @@ public abstract class BrowserUtility {
             else {
                 driver.set(new ChromeDriver());
             }
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
 
         }
         else if (browserName == Browser.EDGE) {
@@ -72,6 +85,7 @@ public abstract class BrowserUtility {
             } else {
                 driver.set(new EdgeDriver());
             }
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
 
         }
         else if (browserName == Browser.FIREFOX)
@@ -85,6 +99,7 @@ public abstract class BrowserUtility {
             } else {
                 driver.set(new FirefoxDriver());
             }
+            wait = new WebDriverWait(driver.get(), Duration.ofSeconds(30L));
         }
 
     }
@@ -99,9 +114,44 @@ public abstract class BrowserUtility {
         driver.get().get(url);
     }
 
-    public String getText(By locator)
+    public String getVisibleText(By locator)
     {
-        WebElement userNameElement = driver.get().findElement(locator);
+        WebElement userNameElement = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return userNameElement.getText();
+    }
+
+    public List<String> getAllVisibleText(By locator)
+    {
+        List<WebElement> webElementList = getDriver().findElements(locator);
+        List<String> visibleTextList = new ArrayList<String>();
+        for (WebElement e: webElementList)
+        {
+            visibleTextList.add(getVisibleText(e));
+            System.out.println(getVisibleText(e));
+        }
+
+        return visibleTextList;
+    }
+
+    public List<WebElement> getAllElements(By locator)
+    {
+        List<WebElement> elementList = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+        return elementList;
+
+    }
+    public void selectFromDropDown(By dropDownLocator, String optionToSelect)
+    {
+        WebElement element = driver.get().findElement(dropDownLocator);
+        Select select = new Select(element);
+        select.selectByVisibleText(optionToSelect);
+    }
+    public void clearText(By textBoxLocator)
+    {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(textBoxLocator));
+        element.clear();
+    }
+    public String getVisibleText(WebElement userNameElement)
+    {
         return userNameElement.getText();
     }
     public void maximizeWindow()
@@ -111,14 +161,30 @@ public abstract class BrowserUtility {
 
     public void clickOn(By locator)
     {
-        WebElement element = driver.get().findElement(locator);
+
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        element.click();
+    }
+    public void clickOnCheckbox(By locator)
+    {
+
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        element.click();
+    }
+    public void clickOn(WebElement element)
+    {
         element.click();
     }
 
     public void enterText(By locator, String text)
     {
-        WebElement element = driver.get().findElement(locator);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         element.sendKeys(text);
+    }
+    public void enterSpecialKey(By locator, Keys keyToEnter)
+    {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        element.sendKeys(keyToEnter);
     }
     public String takeScreenShot(String name) {
         TakesScreenshot screenshot = (TakesScreenshot) driver.get();
