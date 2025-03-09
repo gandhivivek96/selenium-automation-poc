@@ -1,5 +1,5 @@
 
-# Selenium Test Automation POC
+# Test Automation Framework
 
 This project is a Proof of Concept (POC) for an automated testing framework built with Selenium WebDriver, Java, and TestNG, designed for testing e-commerce websites. It demonstrates best practices for maintainable, scalable, and robust test automation.
 
