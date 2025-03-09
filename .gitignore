@@ -6,6 +6,9 @@ target/
  # Ignore logs directory
  logs/
 
+# ignore src main
+src/main/
+
  # Ignore specific HTML reports (if they are at the project root)
  report.html
 
