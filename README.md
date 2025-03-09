@@ -24,14 +24,13 @@ This project is a Proof of Concept (POC) for an automated testing framework buil
 *   Java (JDK 11+)
 *   Selenium WebDriver
 *   TestNG
-*   OpenCSV
-*   Gson
-*   Apache POI
-*   Faker
-*   LambdaTest
-*   Log4j 2
 *   Maven
-*   GitHub Actions
+*   OpenCSV, Gson, Apache POI (for data-driven testing)
+*   Log4j 2 (for logging)
+*   ExtentReports (for reporting)
+*   Faker
+*   GitHub Actions (for CI/CD)
+*   LambdaTest (optional, for cloud testing)
 
 
 ## Prerequisites
