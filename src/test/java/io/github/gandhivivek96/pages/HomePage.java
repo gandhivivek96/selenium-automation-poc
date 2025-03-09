@@ -26,8 +26,8 @@ public final class HomePage extends BrowserUtility {
         String url = "http://www.automationpractice.pl/index.php";
         goToWebsite(url);
     }
-    public HomePage(Browser browserName) {
-        super(browserName);
+    public HomePage(Browser browserName, boolean isHeadless) {
+        super(browserName, isHeadless);
 //        properties util
 //        goToWebsite(readProperty(QA,"URL"));
 

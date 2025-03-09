@@ -18,12 +18,6 @@ import static io.github.gandhivivek96.constants.Browser.*;
 @Listeners({ io.github.gandhivivek96.listeners.TestListener.class })
 public class LoginTest  extends TestBase {
 
-
-
-
-
-
-
     @Test(description = "verifies login test for valid user" , groups = {"e2e","sanity"} ,
     dataProviderClass = io.github.gandhivivek96.dataproviders.LoginDataProvider.class,
     dataProvider = "LoginTestDataProvider")
