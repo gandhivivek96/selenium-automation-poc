@@ -50,10 +50,9 @@ jobs:
 
     - name: Copy report to public folder
       if: always()
-
-      run:
+      run: |
         mkdir -p public/extent-reports
-        cp -R report.html public/extent-reports/
+        cp -R report.html  public/extent-reports/
         cp -R screenshots/ public/extent-reports/screenshots/
         ls -l
 
@@ -64,8 +63,9 @@ jobs:
         folder: public/extent-reports/
         token: ${{ secrets.PATTEST }}
         clean: true
+
       
     
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+    #- name: Update dependency graph
+    #  uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
